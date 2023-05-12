@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+    <head>
+	<script async src="https://cse.google.com/cse.js?cx=60c8e87117fbf4b47"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+        integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js" integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="config.css">
+	<link rel="icon" type="image/x-icon" href="icon.png">
+	<title>HTML Webtools Version 1.1.3</title>
+        <script src="js.txt">
+	</script>
+    </head>
+    <body>
+	<div class="sticky , font1">HTML Webtools V.1.1.3
+		<button onclick="hideconv()">Toggle Converter</button>
+		<button onclick="hidecalc()">Toggle Calculator</button>
+		<button onclick="hidemem()">Toggle Memory</button>
+		<button onclick="hidetext()">Toggle Text Editor</button>
+	</div>
+        </br>
+        <form class="draggable" id="thebiggestfunny">
+            <fieldset class="windowfield" id="field">
+                <legend class="noselc , windowlegend" id="thefunny120"><b>Converter</b></legend>
+                <textarea id="funny2" oninput="thefunny()"></textarea>
+                <textarea id="funny50" hidden></textarea>
+                <div id="funnyanswer">
+                    <h3><span id="funny"></span></h3>
+                </div>
+                <label id="mode" for="ChangeMode">Decimal to binary:</label>
+                <button type="button" id="ChangeMode" onclick="changeMode()">Change Conversion</button>
+            </fieldset>
+        </form>
+    <div id="gameisbad" class="draggable">
+        <div id="smt">
+            <form id="calculator" class="windowform">
+                <fieldset id="calcfield" class="windowfield">
+                    <legend class="noselc , windowlegend" id="calctitle"><b>Calculator</b></legend>
+                    <table id="calcu">
+                        <tr>
+                            <td colspan="3"><input type="text" id="result"></td>
+                            <td><input type="button" value="c" onclick="clr()" /> </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="1" onclick="dis('1')"
+                                    onkeydown="myFunction(event)"> </td>
+                            <td><input type="button" value="2" onclick="dis('2')"
+                                    onkeydown="myFunction(event)"> </td>
+                            <td><input type="button" value="3" onclick="dis('3')"
+                                    onkeydown="myFunction(event)"> </td>
+                            <td><input type="button" value="/" onclick="dis('/')"
+                                    onkeydown="myFunction(event)"> </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="4" onclick="dis('4')"
+                                    onkeydown="myFunction(event)"> </td>
+                            <td><input type="button" value="5" onclick="dis('5')"
+                                    onkeydown="myFunction(event)"> </td>
+                            <td><input type="button" value="6" onclick="dis('6')"
+                                    onkeydown="myFunction(event)"> </td>
+                            <td><input type="button" value="*" onclick="dis('*')"
+                                    onkeydown="myFunction(event)"> </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="7" onclick="dis('7')"
+                                    onkeydown="myFunction(event)"> </td>
+                            <td><input type="button" value="8" onclick="dis('8')"
+                                    onkeydown="myFunction(event)"> </td>
+                            <td><input type="button" value="9" onclick="dis('9')"
+                                    onkeydown="myFunction(event)"> </td>
+                            <td><input type="button" value="-" onclick="dis('-')"
+                                    onkeydown="myFunction(event)"> </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="0" onclick="dis('0')"
+                                    onkeydown="myFunction(event)"> </td>
+                            <td><input type="button" value="." onclick="dis('.')"
+                                    onkeydown="myFunction(event)"> </td>
+                            <td><input type="button" value="=" onclick="solve()"> </td>
+                            <td><input type="button" value="+" onclick="dis('+')"
+                                    onkeydown="myFunction(event)"> </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+        <div id="Mem" class="draggable">
+            <form id="memform" class="windowform">
+                <fieldset id="memfield" class="windowfield">
+                    <legend class="noselc , windowlegend" id="memtitle"><b>Memory</b></legend>
+                    <label class="switch">
+                    <input type="checkbox" id="readfrom">
+                    <span class="slider"></span>
+                    </label>
+                    <br>
+                    <br>
+                    <button type="button" class="pad1" id="read1" onclick="memory1()">Store</button><button type="button" class="pad1" onclick="write1()">Write</button><label class="selectable memfont" id="mem1"></label><br>
+                    <button type="button" class="pad1" id="read2" onclick="memory2()">Store</button><button type="button" class="pad1" onclick="write2()">Write</button><label class="selectable memfont" id="mem2"></label><br>
+                    <button type="button" class="pad1" id="read3" onclick="memory3()">Store</button><button type="button" class="pad1" onclick="write3()">Write</button><label class="selectable memfont" id="mem3"></label><br>
+                    <button type="button" class="pad1" id="read4" onclick="memory4()">Store</button><button type="button" class="pad1" onclick="write4()">Write</button><label class="selectable memfont" id="mem4"></label><br>
+                    <button type="button" class="pad1" id="read5" onclick="memory5()">Store</button><button type="button" class="pad1" onclick="write5()">Write</button><label class="selectable memfont" id="mem5"></label><br>
+                    <button type="button" class="pad1" id="read6" onclick="memory6()">Store</button><button type="button" class="pad1" onclick="write6()">Write</button><label class="selectable memfont" id="mem6"></label><br>
+                    <button type="button" class="pad1" id="read7" onclick="memory7()">Store</button><button type="button" class="pad1" onclick="write7()">Write</button><label class="selectable memfont" id="mem7"></label><br>
+                    <button type="button" class="pad1" id="read8" onclick="memory8()">Store</button><button type="button" class="pad1" onclick="write8()">Write</button><label class="selectable memfont" id="mem8"></label><br>
+                </fieldset>
+            </form>
+        </div>
+        <div id="textbox" class="draggable">
+            <form id="textform class="windowform">
+                <fieldset id="textfield" class="windowfield">
+                    <legend class="noselc , windowlegend" id="texttitle"><b>Text</b></legend>
+                    <textarea id="textinput"></textarea>
+                    <br class="small">
+                    <button type="button" id="download1" onclick="test1()">Download Text</button><br>
+                    <label class="font1" for="filenames" id="namelabel">Insert Filename and Type</label>
+                    <textarea id="filenames"></textarea>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
