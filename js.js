@@ -22,11 +22,10 @@ function download(filename) {
     element.click();
     document.body.removeChild(element);
 }
- 
+var modearray = ["Decimal to binary:" , "Binary to decimal:" , "Hexadecimal to decimal:" , "Decimal to Hexadecimal:" , "Octal to decimal:" , "Decimal to octal:" ,"Base64 Encoder" , "Base64 Decoder"]
 //#region Thefunny
     function thefunny() {
         var funny5 = document.getElementById("funny"), funny7 = document.getElementById("funny50"), Mode = document.getElementById("mode"), decimal = funny2.value;
-        let modearray = ["Decimal to binary:" , "Binary to decimal:" , "Hexadecimal to decimal:" , "Decimal to Hexadecimal:" , "Octal to decimal:" , "Decimal to octal:" ,"Base64 Encoder" , "Base64 Decoder"]
         let binary = (Number(decimal).toString(2));
         const hexjoin = "0x" + decimal;
        
@@ -56,13 +55,15 @@ function download(filename) {
             funny7.innerHTML = atob(decimal);
         }
     }
+	function changemode(modeval1, modeval2) {
+		var Mode = document.getElementById("mode");
+		if (Mode.innerHTML === modeval1) {
+			Mode.innerHTML = modeval2
+		}
+	}
     function changeMode() {
-	let modearray = ["Decimal to binary:" , "Binary to decimal:" , "Hexadecimal to decimal:" , "Decimal to Hexadecimal:" , "Octal to decimal:" , "Decimal to octal:" ,"Base64 Encoder" , "Base64 Decoder"]
-        var Mode = document.getElementById("mode");
-        if (Mode.innerHTML === modearray[0]) {
-            Mode.innerHTML = modearray[1];
-        } else if (Mode.innerHTML === modearray[1]) {
-            Mode.innerHTML = modearray[2];
+        changemode("modearray[0]", "modearray[1]")
+        changemode("modearray[1]", "modearray[2]")
         } else if (Mode.innerHTML === modearray[2]) {
             Mode.innerHTML = modearray[3];
         } else if (Mode.innerHTML === modearray[3]) {
