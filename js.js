@@ -8,7 +8,7 @@ addEventListener("mousemove", (e) => {
             document.getElementById(id).style.top = e.clientY + offy + "px" 
     	    document.getElementById(id).style.left = e.clientX + offx + "px"
 	}
-  }
+    }
     move("gameisbad", -10, -50, "calctitle")
     if (ismousedown && document.getElementById("memtitle").matches(":hover")) {
         move("Mem", -10, -40)
