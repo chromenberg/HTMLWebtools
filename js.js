@@ -3,13 +3,13 @@ document.onmousedown = (e) => {ismousedown = true}
 document.onmouseup = (e) => {ismousedown = false}
 
 addEventListener("mousemove", (e) => {
-  function move(id, offy, offx) {
-    document.getElementById(id).style.top = e.clientY + offy + "px" 
-    document.getElementById(id).style.left = e.clientX + offx + "px"
+    function move(id, offy, offx, id2) {
+        if (ismousedown && document.getElementById(id2).matches(":hover")) {
+            document.getElementById(id).style.top = e.clientY + offy + "px" 
+    	    document.getElementById(id).style.left = e.clientX + offx + "px"
+	}
   }
-    if (ismousedown && document.getElementById("calctitle").matches(":hover")) {
-        move("gameisbad", -10, -50)
-    }
+    move("gameisbad", -10, -50, "calctitle")
     if (ismousedown && document.getElementById("memtitle").matches(":hover")) {
         move("Mem", -10, -40)
     }
