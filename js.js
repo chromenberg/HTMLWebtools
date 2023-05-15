@@ -10,15 +10,9 @@ addEventListener("mousemove", (e) => {
 	}
     }
     move("gameisbad", -10, -50, "calctitle")
-    if (ismousedown && document.getElementById("memtitle").matches(":hover")) {
-        move("Mem", -10, -40)
-    }
-    if (ismousedown && document.getElementById("thefunny120").matches(":hover")) {
-        move("thebiggestfunny", -20, -100)
-    }
-    if (ismousedown && document.getElementById("texttitle").matches(":hover")) {
-        move("textbox", -10, -35)
-    }
+    move("Mem", -10, -40, "memtitle")
+    move("thebiggestfunny", -20, -100, "thefunny120")
+    move("textbox", -10, -35, "texttitle")
 }) 
 function download(filename) {
     var element = document.createElement('a');
