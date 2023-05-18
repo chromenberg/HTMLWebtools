@@ -113,6 +113,19 @@
     }
     #labeldiv {
     }
+    #mspaintfree {
+	
+    }
+    #mspaintpremium {
+	width: 450px;
+	height: 450px;
+    }
+    #canvas_div {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 	/*Classes*/
 	    .sticky {
 		position: -webkit-sticky;
@@ -121,7 +134,8 @@
 	       	background-color: #666;
 	       	padding: 4px;
 	       	font-size: 25px;
-		    z-index:112123
+		z-index:112123
+		margin-top: -10px;
 	    }
 	    .windowdiv {
 	        background-color: #555555;

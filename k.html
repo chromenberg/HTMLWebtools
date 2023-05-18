@@ -10,15 +10,16 @@
 	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<link rel="stylesheet" href="config.css">
 	<link rel="icon" type="image/x-icon" href="icon.png">
-	<title>HTML Webtools Version 1.2.3</title>
+	<title>HTML Webtools Version 1.3</title>
     </head>
-<body>
-	<div class="sticky , font1">HTML Webtools V.1.2.3
+    <body onload="init()">
+	<div class="sticky , font1">HTML Webtools V.1.3
 		<button onclick="hidefunc('thebiggestfunny')">Toggle Converter</button>
 		<button onclick="hidefunc('gameisbad')">Toggle Calculator</button>
 		<button onclick="hidefunc('Mem')">Toggle Memory</button>
 		<button onclick="hidefunc('textbox')">Toggle Text Editor</button>
 		<button onclick="hidefunc('emaildiv')">Toggle Email</button>
+  	        <button onclick="hidefunc('mspaintcracked')">Toggle Whiteboard</button>
 	</div>
 	</br>
 	<form class="draggable" id="thebiggestfunny">
@@ -92,9 +93,11 @@
 			<fieldset id="memfield" class="windowfield">
 				<legend class="noselc , windowlegend" id="memtitle"><b>Memory</b></legend>
 				<label class="switch">
-                <input type="checkbox" id="readfrom">
-                <span class="slider"></span>
-                </label>
+                    		<input type="checkbox" id="readfrom">
+                    		<span class="slider"></span>
+                    		</label>
+				<br>
+				<br>
 				<button type="button" class="pad1" id="read1" onclick="test4('mem1')">Store</button><button type="button" class="pad1" onclick="writefunc('mem1')">Write</button><label class="selectable memfont" id="mem1"></label><br>
 				<button type="button" class="pad1" id="read2" onclick="test4('mem2')">Store</button><button type="button" class="pad1" onclick="writefunc('mem2')">Write</button><label class="selectable memfont" id="mem2"></label><br>
 				<button type="button" class="pad1" id="read3" onclick="test4('mem3')">Store</button><button type="button" class="pad1" onclick="writefunc('mem3')">Write</button><label class="selectable memfont" id="mem3"></label><br>
@@ -103,15 +106,15 @@
 				<button type="button" class="pad1" id="read6" onclick="test4('mem6')">Store</button><button type="button" class="pad1" onclick="writefunc('mem6')">Write</button><label class="selectable memfont" id="mem6"></label><br>
 				<button type="button" class="pad1" id="read7" onclick="test4('mem7')">Store</button><button type="button" class="pad1" onclick="writefunc('mem7')">Write</button><label class="selectable memfont" id="mem7"></label><br>
 				<button type="button" class="pad1" id="read8" onclick="test4('mem8')">Store</button><button type="button" class="pad1" onclick="writefunc('mem8')">Write</button><label class="selectable memfont" id="mem8"></label><br>
-            </fieldset>
-	    </form>
+                	</fieldset>
+	    	</form>
 	</div>
 	<div id="textbox" class="draggable">
 		<form autocomplete="off" id="textform" class="windowform">
 			<fieldset id="textfield" class="windowfield">
 				<legend class="noselc , windowlegend" id="texttitle"><b>Text</b></legend>
+				<br>
 				<textarea id="textinput"></textarea>
-				<br class="small">
 			</fieldset>
 		</form>
 	</div>
@@ -123,7 +126,7 @@
 					<label class="font1" id="namelabel">Insert Filename and Type</label>
 					<input type="textarea" id="filenames"></input>
 				</div>
-				<button type="button" id="download1" onclick="test1()">Download Text</button><br>
+				<button type="button" id="download1" onclick="test1()">Download Text</button><button type="button" id="downloadimg" onclick="down()">Download Image</button><br>
 				<div class="divlabel">
 					<label class="font1, alignlabelmiddle" id="subjectlabel" for="subject">Mail Subject</label>
 					<input type="textarea" id="subject"></input>
@@ -137,10 +140,22 @@
 			</fieldset>
 		</form>
 	</div>
-	<script src="js.js">
-	</script>
+	<div id="mspaintcracked" class="draggable">
+	    <form id="mspaintfree" class="windowform">
+		<fieldset id="mspaintpremium" class="windowfield">
+		    <legend id="mspaint" class="noselc , windowlegend">Whiteboard</legend>
+		    <div id="canvas_div" style="overflow-x: auto;" class="noselc">
+		    <canvas id="canvas" width="900" height="360"></canvas>
+		    Line width : <input type="number" id="selWidth"></input>
+		    Color : <input type="color" id="selColor" value="#ffffff"></input>
+		    <input type="checkbox" id="erase" onclick="erase()">Eraser</input>
+		    </div>
+		</fieldset>
+	    </form>
+	</div>
+	<script src="js.txt"></script>
+	<script src="textedit.txt"/></script>
 	<datalist id="browser-input-options">
-		/* bullshit emails lol */
 		<option value="lohare@lancasterhigh.lancs.sch.uk">
 		<option value="AMiddleton@lancasterhigh.lancs.sch.uk">
 		<option value="trubery@lancasterhigh.lancs.sch.uk">
