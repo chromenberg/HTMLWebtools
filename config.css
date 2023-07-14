@@ -1,4 +1,12 @@
 /*#region*/
+    #resize {
+	resize: both;
+	padding: 10px;
+    }
+    #testbranch {
+	color: #555555;
+        font-size: 500%;
+    }
     body {
         background-color: #444444;
 	height: 1080px;
@@ -126,7 +134,94 @@
         margin-left: auto;
         margin-right: auto;
     }
+    #menu {
+	position: relative;
+	float: right;
+    }
+#radius {
+  margin-left: 51px;
+}
+#diameter {
+  margin-left: 36px;
+}
+#area {
+  margin-left: 64px;
+}
+#radius2 {
+  margin-left: 51px;
+}
+#diameter2 {
+  margin-left: 36px;
+}
+#area2 {
+  margin-left: 64px;
+}
+#height {
+  margin-left: 52px;
+}
+#surfarea {
+  margin-left: 12px;
+}
+#volume {
+  margin-left: 46px;
+}
 	/*Classes*/
+	    .static {
+		position: static;
+	    }
+	    .sidebar {
+    		height: 720px;
+    		width: 0;
+    		position: fixed;
+    		z-index: 1;
+    		top: 0;
+    		left: 0;
+    		background-color: #aaaaaa;
+    		overflow-x: hidden;
+		overflow-y: hidden;
+    		padding-top: 60px;
+    		transition: 0.5s;
+		border-style: none none none none;
+		border-color: #444444;
+	    }
+	    .sidebar1 {
+    		height: 720px;
+    		width: 10px;
+    		position: fixed;
+    		z-index: 1;
+    		top: 0;
+    		left: 0;
+    		background-color: #aaaaaa;
+    		overflow-x: hidden;
+		overflow-y: hidden;
+    		padding-top: 60px;
+    		transition: 0.5s;
+		border-style: solid solid solid solid;
+		border-color: #ffffff;
+	    }
+	    .sidebar .closebtn {
+	  	position: absolute;
+	  	top: 0;
+	  	right: 25px;
+	  	font-size: 36px;
+	  	margin-left: 50px;
+	    }
+	    .sidebar buttone {
+    		padding: 8px 8px 8px 32px;
+    		text-decoration: none;
+    		font-size: 25px;
+    		color: #818181;
+    		display: block;
+    		transition: 0.3s;
+    	    }
+	    .openbtn {
+		border-radius: 10px;
+		padding: 1px 10px;
+		border: none;
+		cursor: pointer;
+		background-color: #aaaaaa;
+		font-size: 20px;
+	    }
 	    .sticky {
 		position: -webkit-sticky;
 	       	position: sticky;
@@ -136,6 +231,9 @@
 	       	font-size: 25px;
 		z-index:112123
 		margin-top: -10px;
+	    }
+	    .inline {
+		display: inline-block;
 	    }
 	    .windowdiv {
 	        background-color: #555555;
