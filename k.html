@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+    <head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+	integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+	integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="config.css" />
+	<link rel="icon" type="image/x-icon" href="icon.png" />
+	<title>HTML Webtools Version 2 EXP</title>
+    </head>
+    <body onload="hidefunc('convbutton'), hidefunc('calcbutton'), hidefunc('membutton'), hidefunc('textbutton'), hidefunc('emailbutton'), hidefunc('whitebutton'), hidefunc('button42'), hidefunc('button69')" translate="no">
+	<div id="bar" class="sticky font1">HTML Webtools V.2 EXP
+	    <div class="inline">
+		<button class="inline" id="convbutton" onclick="hidefunc('thebiggestfunny'), hidefunc('convbutton')">Show Converter</button>
+	    </div>
+	    <div class="inline">
+		<button class="inline" id="calcbutton" onclick="hidefunc('gameisbad'), hidefunc('calcbutton')">Show Calculator</button>
+	    </div>
+	    <div class="inline">
+		<button class="inline" id="membutton" onclick="hidefunc('Mem'), hidefunc('membutton')">Show Memory</button>
+	    </div>
+	    <div class="inline">
+		<button class="inline" id="textbutton" onclick="hidefunc('textbox'), hidefunc('textbutton')">Show Text</button>
+	    </div>
+	    <div class="inline">
+		<button class="inline" id="emailbutton" onclick="hidefunc('emaildiv'), hidefunc('emailbutton')">Show Email</button>
+	    </div>
+	    <div class="inline">
+		<button class="inline" id="whitebutton" onclick="hidefunc('mspaintcracked'), hidefunc('whitebutton')">Show Whiteboard</button>
+	    </div>
+	    <div class="inline">
+		<button class="inline" id="button42" onclick="hidefunc('plonkalonk'), hidefunc('button42')">Show Test Iframe</button>
+	    </div>
+	    <div class="inline">
+		<button class="inline" id="button69" onclick="hidefunc('rondomnumber'), hidefunc('button69')">Show Customgen</button>
+	    </div>
+	    <div id="menu">
+		<button class="openbtn" onclick="openNav()" id="menubutton">&#9776; Code Editor</button>
+	    </div>
+	</div>
+
+	<form class="draggable" id="thebiggestfunny">
+		<fieldset class="windowfield" id="field">
+			<legend class="noselc , windowlegend" id="thefunny120"><b>Converter</b></legend><button type="button" id="convbutton" onclick="hidefunc('thebiggestfunny'), hidefunc('convbutton')">Minimise</button>
+			<textarea id="funny2" oninput="thefunny()"></textarea>
+			<textarea id="funny50" hidden></textarea>
+			<div id="funnyanswer">
+				<h3><span id="funny"></span></h3>
+			</div>
+			<label id="mode" for="ChangeMode">Decimal to binary:</label>
+			<button type="button" id="ChangeMode" onclick="changeMode()">Change Conversion</button>
+		</fieldset>
+	</form>
+	<div id="gameisbad" class="draggable">
+		<div id="smt">
+			<form id="calculator" class="windowform">
+				<fieldset id="calcfield" class="windowfield">
+					<legend class="noselc , windowlegend" id="calctitle"><b>Calculator</b></legend><button type="button" id="calcbutton" onclick="hidefunc('gameisbad'), hidefunc('calcbutton')">Minimise</button>
+					<table id="calcu">
+						<tr>
+							<td colspan="3"><input type="text" id="result"></td>
+							<td><input type="button" value="c" onclick="clr()" /> </td>
+						</tr>
+						<tr>
+							<td><input type="button" value="1" onclick="dis('1')"
+                             	    onkeydown="myFunction(event)"> </td>
+							<td><input type="button" value="2" onclick="dis('2')"
+                                    onkeydown="myFunction(event)"> </td>
+							<td><input type="button" value="3" onclick="dis('3')"
+                                    onkeydown="myFunction(event)"> </td>
+							<td><input type="button" value="/" onclick="dis('/')"
+                                    onkeydown="myFunction(event)"> </td>
+						</tr>
+						<tr>
+							<td><input type="button" value="4" onclick="dis('4')"
+                                    onkeydown="myFunction(event)"> </td>
+							<td><input type="button" value="5" onclick="dis('5')"
+                                    onkeydown="myFunction(event)"> </td>
+							<td><input type="button" value="6" onclick="dis('6')"
+                                    onkeydown="myFunction(event)"> </td>
+							<td><input type="button" value="*" onclick="dis('*')"
+                                    onkeydown="myFunction(event)"> </td>
+						</tr>
+						<tr>
+							<td><input type="button" value="7" onclick="dis('7')"
+                                    onkeydown="myFunction(event)"> </td>
+							<td><input type="button" value="8" onclick="dis('8')"
+                                    onkeydown="myFunction(event)"> </td>
+							<td><input type="button" value="9" onclick="dis('9')"
+                                    onkeydown="myFunction(event)"> </td>
+							<td><input type="button" value="-" onclick="dis('-')"
+                                    onkeydown="myFunction(event)"> </td>
+						</tr>
+						<tr>
+							<td><input type="button" value="0" onclick="dis('0')"
+                                    onkeydown="myFunction(event)"> </td>
+							<td><input type="button" value="." onclick="dis('.')"
+                                    onkeydown="myFunction(event)"> </td>
+							<td><input type="button" value="=" onclick="solve()"> </td>
+							<td><input type="button" value="+" onclick="dis('+')"
+                                    onkeydown="myFunction(event)"> </td>
+						</tr>
+					</table>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div id="Mem" class="draggable">
+		<form id="memform" class="windowform">
+			<fieldset id="memfield" class="windowfield">
+				<legend class="noselc , windowlegend" id="memtitle"><b>Memory</b></legend><button type="button" id="membutton" onclick="hidefunc('Mem'), hidefunc('membutton')">Minimise</button>
+				<label class="switch">
+                    		<input type="checkbox" id="readfrom">
+                    		<span class="slider"></span>
+                    		</label>
+				<br>
+				<button type="button" onclick="storeto()" id="Store">Store</button><button type="button" onclick="writeto()" id="write">Write</button><button type="button" id="select" onclick="selecttext()">Select</button>
+				<br>
+				<input type="number" oninput="addresschange()" id="address">
+				<br>
+				<p id="bit1"></p>
+				<input type="textarea" class="small" id="1" value="0"><br>
+				<input type="textarea" class="small" id="2" value="0"><br>
+				<input type="textarea" class="small" id="3" value="0"><br>
+				<input type="textarea" class="small" id="4" value="0"><br>
+				<input type="textarea" class="small" id="5" value="0"><br>
+				<input type="textarea" class="small" id="6" value="0"><br>
+				<input type="textarea" class="small" id="7" value="0"><br>
+				<input type="textarea" class="small" id="8" value="0"><br>
+				<input type="textarea" class="small" id="9" value="0"><br>
+				<input type="textarea" class="small" id="10" value="0"><br>
+				<input type="textarea" class="small" id="11" value="0"><br>
+				<input type="textarea" class="small" id="12" value="0"><br>
+				<input type="textarea" class="small" id="13" value="0"><br>
+				<input type="textarea" class="small" id="14" value="0"><br>
+				<input type="textarea" class="small" id="15" value="0"><br>
+				<input type="textarea" class="small" id="16" value="0"><br>
+				<input type="textarea" class="small" id="17" value="0"><br>
+				<input type="textarea" class="small" id="18" value="0"><br>
+				<input type="textarea" class="small" id="19" value="0"><br>
+				<input type="textarea" class="small" id="20" value="0"><br>
+				<input type="textarea" class="small" id="21" value="0"><br>
+				<input type="textarea" class="small" id="22" value="0"><br>
+				<input type="textarea" class="small" id="23" value="0"><br>
+				<input type="textarea" class="small" id="24" value="0"><br>
+				<!--
+				<button type="button" class="pad1" id="read1" onclick="test4('mem1')">Store</button><button type="button" class="pad1" onclick="writefunc('mem1')">Write</button><label class="selectable memfont" id="mem1"></label><br>
+				<button type="button" class="pad1" id="read2" onclick="test4('mem2')">Store</button><button type="button" class="pad1" onclick="writefunc('mem2')">Write</button><label class="selectable memfont" id="mem2"></label><br>
+				<button type="button" class="pad1" id="read3" onclick="test4('mem3')">Store</button><button type="button" class="pad1" onclick="writefunc('mem3')">Write</button><label class="selectable memfont" id="mem3"></label><br>
+				<button type="button" class="pad1" id="read4" onclick="test4('mem4')">Store</button><button type="button" class="pad1" onclick="writefunc('mem4')">Write</button><label class="selectable memfont" id="mem4"></label><br>
+				<button type="button" class="pad1" id="read5" onclick="test4('mem5')">Store</button><button type="button" class="pad1" onclick="writefunc('mem5')">Write</button><label class="selectable memfont" id="mem5"></label><br>
+				<button type="button" class="pad1" id="read6" onclick="test4('mem6')">Store</button><button type="button" class="pad1" onclick="writefunc('mem6')">Write</button><label class="selectable memfont" id="mem6"></label><br>
+				<button type="button" class="pad1" id="read7" onclick="test4('mem7')">Store</button><button type="button" class="pad1" onclick="writefunc('mem7')">Write</button><label class="selectable memfont" id="mem7"></label><br>
+				<button type="button" class="pad1" id="read8" onclick="test4('mem8')">Store</button><button type="button" class="pad1" onclick="writefunc('mem8')">Write</button><label class="selectable memfont" id="mem8"></label><br>
+				-->
+                	</fieldset>
+	    	</form>
+	</div>
+	<div id="textbox" class="draggable">
+		<form autocomplete="off" id="textform" class="windowform">
+			<fieldset id="textfield" class="windowfield">
+				<legend class="noselc , windowlegend" id="texttitle"><b>Text</b></legend><button type="button" id="textbutton" onclick="hidefunc('textbox'), hidefunc('textbutton')">Minimise</button>
+				<br>
+				<textarea id="textinput"></textarea>
+			</fieldset>
+		</form>
+	</div>
+	<div id="emaildiv" class="draggable">
+		<form id="emailform" class="windowform">
+			<fieldset id="emailfield" class="windowfield">
+				<legend class="noselc , windowlegend" id="emailtitle"><b>Email and Download</b></legend><button type="button" id="emailbutton" onclick="hidefunc('emaildiv'), hidefunc('emailbutton')">Minimise</button>
+				<div class="divlabel">
+					<label class="font1" id="namelabel">Insert Filename and Type</label>
+					<input type="textarea" id="filenames"></input>
+				</div>
+				<button type="button" id="download1" onclick="test1()">Download Text</button><button type="button" id="downloadimg" onclick="down()">Download Image</button><br>
+				<div class="divlabel">
+					<label class="font1, alignlabelmiddle" id="subjectlabel" for="subject">Mail Subject</label>
+					<input type="textarea" id="subject"></input>
+				</div>
+				<div class="divlabel, autocomplete">
+					<label class="font1, alignlabelmiddle" id="recipientlabel" for="mail">Mail Recipient</label>
+					<input type="textarea" id="mail" list="browser-input-options" autocomplete="false"></input>
+				</div>
+				<button type="button" onclick="sendmail()">Send Mail</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<div id="mspaintcracked" class="draggable">
+	    <form id="mspaintfree" class="windowform">
+		<fieldset id="mspaintpremium" class="windowfield">
+		    <legend id="mspaint" class="noselc , windowlegend"><b>Whiteboard</b></legend><button type="button" onclick="hidefunc('mspaintcracked'), hidefunc('whitebutton')">Minimise</button>
+		    <div id="canvas_div" style="overflow-x: auto;" class="noselc">
+		    <canvas id="canvas" width="900" height="360"></canvas>
+		    Line width : <input type="number" id="selWidth"></input>
+		    Color : <input type="color" id="selColor" value="#000000"></input>
+		    <input type="checkbox" id="erase" onclick="erase()">Eraser</input>
+		    </div>
+		</fieldset>
+	    </form>
+	</div>
+	<div id="rondomnumber" class="draggable">
+	    <fieldset id="fEld" class="windowfield">
+		<legend id="ti" class="noselc , windowlegend"><b>Circle Calc + Pythagoras</b></legend><button onclick="hidefunc('rondomnumber'), hidefunc('button69')">Minimise</button>
+	      <div id="inpoot">
+	      <label id="AAA" for="radius" class="aligntextmiddle">Radius:</label><input type="number" id="radius" maxlength="10000000" oninput="radius1()"><br>
+	      <label id="AAB" for="diameter" class="aligntextmiddle">Diameter:</label><input type="number" id="diameter" maxlength="10000000" oninput="diameter1()"><br>
+	      <label id="AAC" for="circumference" class="aligntextmiddle">Circumference:</label><input type="number" maxlength="10000000" id="circumference" oninput="circumference1()"><br>
+	      <label id="AAD" for="area" class="aligntextmiddle">Area:</label><input type="number" maxlength="10000000" id="area" oninput="area1()"><br>
+	      <label id="AAI" for="height" class="aligntextmiddle">Height:</label><input type="number" id="height" oninput="height1()"><br>
+	      <label id="AAJ" for="surfarea" class="aligntextmiddle">Surface Area:</label><input type="number" id="surfarea" oninput="surfarea1()"><br>
+	      <label id="AAK" for="volume" class="aligntextmiddle">Volume:</label><input type="number" id="volume" oninput="volume1()"><br>
+	    </div><br>
+	    <label id="round" for="roundto">Rounded Result:</label><input type="number" class="aligntextmiddle" id="roundto" oninput="roundednumbers()">
+	    <div id="rnd"><br>
+	      <label id="AAE" for="radius2" class="aligntextmiddle">Radius:</label><input type="number" id="radius2"><br>
+	      <label id="AAF" for="diameter2" class="aligntextmiddle">Diameter:</label><input type="number" id="diameter2"><br>
+	      <label id="AAG" for="circumference2" class="aligntextmiddle">Circumference:</label><input type="number" id="circumference2"><br>
+	      <label id="AAH" for="area2" class="aligntextmiddle">Area:</label><input type="number" id="area2"><br>
+	    </div><br>
+		<input type="number" id="asqr"><br>
+		<input type="number" id="bsqr"><br>
+		<input type="number" id="csqr"><br>
+		<button id="pythag" onclick="calcpyth()">Calculate Pythagoras</button>
+	    </fieldset>
+	</div>
+	<!--<div id="plonkalonk" class="draggable">
+	    <fieldset id="pleb" class="windowfield">
+		<legend id="Bitburner" class="noselc , windowlegend"><b>Bitburner</b></legend><button onclick="hidefunc('plonkalonk'), hidefunc('button42')">Minimise</button>
+		<iframe src="./New folder (2)/Bitburner backup 1/Bitburner v2.3.0 (fd6478a5b).html" width="720px" height="420px" resize="both" id="resize"></iframe>
+            </fieldset>
+	</div>-->
+	<div id="sidebar" class="sidebar">
+	    <a class="closebtn noselc" onclick="closeNav()">&times;</a>
+	    <textarea id="html" placeholder="HTML"></textarea>
+    	    <textarea id="css" placeholder="CSS"></textarea><br>
+    	    <textarea id="js" placeholder="JavaScript"></textarea>
+	</div>
+        <div id="sidebar1" class="sidebar">
+	    <a class="closebtn noselc" onclick="closeNav()">&times;</a>
+	    <div id="codeeditor">
+              <iframe id="code" width="720" height="480"></iframe>
+	      <script type="text/javascript" src="app.txt"></script>
+	    </div>
+	</div>
+	<script src="js.txt"></script>
+        <script src="move.txt"></script>
+        <script src="emails.txt"></script>
+	<datalist id="browser-input-options">
+
+	</datalist>
+</body>
+</html>
