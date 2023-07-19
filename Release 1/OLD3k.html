@@ -1,0 +1,906 @@
+<!doctype html>
+
+<html>
+
+    <head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+
+        integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="crossorigin="anonymous"
+
+        referrerpolicy="no-referrer"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js" integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <link rel="stylesheet" href="config2.css">
+
+        <script>
+		var ismousedown = false
+
+document.onmousedown = (e) => {ismousedown = true}
+
+document.onmouseup = (e) => {ismousedown = false}
+
+ 
+
+addEventListener("mousemove", (e) => {
+
+    if (ismousedown && document.getElementById("calctitle").matches(":hover")) {
+
+        document.getElementById("gameisbad").style.top = e.clientY + -10 + "px"
+
+        document.getElementById("gameisbad").style.left = e.clientX + -100 + "px"
+
+    }
+
+    if (ismousedown && document.getElementById("memtitle").matches(":hover")) {
+
+        document.getElementById("Mem").style.top = e.clientY + -60 + "px"
+
+        document.getElementById("Mem").style.left = e.clientX + -90 + "px"
+
+    }
+
+    if (ismousedown && document.getElementById("thefunny120").matches(":hover")) {
+
+        document.getElementById("thebiggestfunny").style.top = e.clientY + -20 + "px"
+
+        document.getElementById("thebiggestfunny").style.left = e.clientX + -100 + "px"
+
+    }
+
+    if (ismousedown && document.getElementById("texttitle").matches(":hover")) {
+
+        document.getElementById("textbox").style.top = e.clientY + -10 + "px"
+
+        document.getElementById("textbox").style.left = e.clientX + -30 + "px"
+
+    }
+
+ 
+
+})
+
+ 
+
+function download(filename) {
+
+ 
+
+    var element = document.createElement('a');
+
+    element.setAttribute('href','data:text/plain;charset=utf-16, ' + encodeURIComponent(document.getElementById("textinput").value));
+
+    element.setAttribute("download", filename);
+
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+
+}
+
+ 
+
+//#region Thefunny
+
+    function thefunny() {
+
+        var funny5 = document.getElementById("funny");
+
+        var funny7 = document.getElementById("funny50");
+
+        var Mode = document.getElementById("mode");
+
+        let Mode1 = "Decimal to binary:";
+
+        let Mode2 = "Binary to decimal:";
+
+        let Mode3 = "Hexadecimal to decimal:";
+
+        let Mode4 = "Decimal to Hexadecimal:"
+
+        let Mode5 = "Octal to decimal:";
+
+        let Mode6 = "Decimal to octal:";
+
+        let Mode7 = "Base64 Encoder:";
+
+        let Mode8 = "Base64 Decoder:";
+
+        let decimal = funny2.value;
+
+        let binary = (Number(decimal).toString(2));
+
+        const hexjoin = "0x" + decimal;
+
+       
+
+        if (Mode.innerHTML === Mode1) {
+
+            funny5.innerHTML = binary;
+
+            funny7.innerHTML = binary;
+
+        }   else if (Mode.innerHTML === Mode2) {
+
+            funny5.innerHTML = parseInt(decimal, 2);
+
+            funny7.innerHTML = parseInt(decimal, 2);
+
+        }   else if (Mode.innerHTML === Mode3) {
+
+            funny5.innerHTML = "0x" + parseInt(hexjoin, );
+
+            funny7.innerHTML = "0x" + parseInt(hexjoin, );
+
+        }   else if (Mode.innerHTML === Mode4) {
+
+            funny5.innerHTML = (Number(decimal).toString(16));
+
+            funny7.innerHTML = (Number(decimal).toString(16));
+
+        }   else if (Mode.innerHTML === Mode5) {
+
+            funny5.innerHTML = parseInt(decimal, 8);
+
+            funny7.innerHTML = parseInt(decimal, 8);
+
+        }   else if (Mode.innerHTML === Mode6) {
+
+            funny5.innerHTML = (Number(decimal).toString(8));
+
+            funny7.innerHTML = (Number(decimal).toString(8));
+
+        }   else if (Mode.innerHTML === Mode7) {
+
+            funny5.innerHTML = btoa(decimal);
+
+            funny7.innerHTML = btoa(decimal);
+
+        }   else {
+
+            funny5.innerHTML = atob(decimal);
+
+            funny7.innerHTML = atob(decimal);
+
+        }
+
+    }
+
+    function changeMode() {
+
+        let Mode1 = "Decimal to binary:";
+
+        let Mode2 = "Binary to decimal:";
+
+        let Mode3 = "Hexadecimal to decimal:";
+
+        let Mode4 = "Decimal to Hexadecimal:";
+
+        let Mode5 = "Octal to decimal:";
+
+        let Mode6 = "Decimal to octal:";
+
+        let Mode7 = "Base64 Encoder";
+
+        let Mode8 = "Base64 Decoder";
+
+        var Mode = document.getElementById("mode");
+
+        if (Mode.innerHTML === Mode1) {
+
+            Mode.innerHTML = Mode2;
+
+        } else if (Mode.innerHTML === Mode2) {
+
+            Mode.innerHTML = Mode3;
+
+        } else if (Mode.innerHTML === Mode3) {
+
+            Mode.innerHTML = Mode4;
+
+        } else if (Mode.innerHTML === Mode4) {
+
+            Mode.innerHTML = Mode5;
+
+        } else if (Mode.innerHTML === Mode5) {
+
+            Mode.innerHTML = Mode6;
+
+        } else if (Mode.innerHTML === Mode6) {
+
+            Mode.innerHTML = Mode7;
+
+        } else if (Mode.innerHTML === Mode7) {
+
+            Mode.innerHTML = Mode8;
+
+        } else {
+
+            Mode.innerHTML = Mode1;
+
+        }
+
+    }
+
+//#endregion
+
+//#region
+
+    function memory1() {
+
+        var convout = funny50.value;
+
+        var calcout = result.value;
+
+        var loc = readfrom.checked;
+
+        var out1 = document.getElementById("mem1");
+
+        if (loc == 0) {
+
+            out1.innerHTML = convout;
+
+        } else if (loc == 1) {
+
+            out1.innerHTML = calcout;
+
+        }
+
+    }
+
+    function memory2() {
+
+        var convout = funny50.value;
+
+        var calcout = result.value;
+
+        var loc = readfrom.checked;
+
+        var out2 = document.getElementById("mem2");
+
+        if (loc == 0) {
+
+            out2.innerHTML = convout;
+
+        } else if (loc == 1) {
+
+            out2.innerHTML = calcout;
+
+        }
+
+    }
+
+    function memory3() {
+
+        var convout = funny50.value;
+
+        var calcout = result.value;
+
+        var loc = readfrom.checked;
+
+        var out3 = document.getElementById("mem3");
+
+        if (loc == 0) {
+
+            out3.innerHTML = convout;
+
+        } else if (loc == 1) {
+
+            out3.innerHTML = calcout;
+
+        }
+
+    }
+
+    function memory4() {
+
+        var convout = funny50.value;
+
+        var calcout = result.value;
+
+        var loc = readfrom.checked;
+
+        var out4 = document.getElementById("mem4");
+
+        if (loc == 0) {
+
+            out4.innerHTML = convout;
+
+        } else if (loc == 1) {
+
+            out4.innerHTML = calcout;
+
+        }
+
+    }
+
+    function memory5() {
+
+        var convout = funny50.value;
+
+        var calcout = result.value;
+
+        var loc = readfrom.checked;
+
+        var out5 = document.getElementById("mem5");
+
+        if (loc == 0) {
+
+            out5.innerHTML = convout;
+
+        } else if (loc == 1) {
+
+            out5.innerHTML = calcout;
+
+        }
+
+    }
+
+    function memory6() {
+
+        var convout = funny50.value;
+
+        var calcout = result.value;
+
+        var loc = readfrom.checked;
+
+        var out6 = document.getElementById("mem6");
+
+        if (loc == 0) {
+
+            out6.innerHTML = convout;
+
+        } else if (loc == 1) {
+
+            out6.innerHTML = calcout;
+
+        }
+
+    }
+
+    function memory7() {
+
+        var convout = funny50.value;
+
+        var calcout = result.value;
+
+        var loc = readfrom.checked;
+
+        var out7 = document.getElementById("mem7");
+
+        if (loc == 0) {
+
+            out7.innerHTML = convout;
+
+        } else if (loc == 1) {
+
+            out7.innerHTML = calcout;
+
+        }
+
+    }
+
+    function memory8() {
+
+        var convout = funny50.value;
+
+        var calcout = result.value;
+
+        var loc = readfrom.checked;
+
+        var out8 = document.getElementById("mem8");
+
+        if (loc == 0) {
+
+            out8.innerHTML = convout;
+
+        } else if (loc == 1) {
+
+            out8.innerHTML = calcout;
+
+        }
+
+    }
+
+    function write1() {
+
+        var convout = document.getElementById("funny2");
+
+        var calcout = document.getElementById("result");
+
+        var test = document.getElementById("test");
+
+        var loc = readfrom.checked;
+
+        var inp = document.getElementById("mem1").innerHTML;
+
+        if (loc == 0) {
+
+            convout.value = inp;
+
+        } else if (loc == 1) {
+
+            calcout.value = inp;
+
+        }
+
+    }
+
+    function write2() {
+
+        var convout = document.getElementById("funny2");
+
+        var calcout = document.getElementById("result");
+
+        var loc = readfrom.checked;
+
+        var inp = document.getElementById("mem2").innerHTML;
+
+        if (loc == 0) {
+
+            convout.value = inp;
+
+        } else if (loc == 1) {
+
+            calcout.value = inp;
+
+        }
+
+    }
+
+    function write3() {
+
+        var convout = document.getElementById("funny2");
+
+        var calcout = document.getElementById("result");
+
+        var loc = readfrom.checked;
+
+        var inp = document.getElementById("mem3").innerHTML;
+
+        if (loc == 0) {
+
+            convout.value = inp;
+
+        } else if (loc == 1) {
+
+            calcout.value = inp;
+
+        }
+
+    }
+
+    function write4() {
+
+        var convout = document.getElementById("funny2");
+
+        var calcout = document.getElementById("result");
+
+        var loc = readfrom.checked;
+
+        var inp = document.getElementById("mem4").innerHTML;
+
+        if (loc == 0) {
+
+            convout.value = inp;
+
+        } else if (loc == 1) {
+
+            calcout.value = inp;
+
+        }
+
+    }
+
+    function write5() {
+
+        var convout = document.getElementById("funny2");
+
+        var calcout = document.getElementById("result");
+
+        let loc = readfrom.checked;
+
+        let inp = document.getElementById("mem5").innerHTML;
+
+        if (loc == 0) {
+
+            convout.value = inp;
+
+        } else if (loc == 1) {
+
+            calcout.value = inp;
+
+        }
+
+    }
+
+    function write6() {
+
+        var convout = document.getElementById("funny2");
+
+        var calcout = document.getElementById("result");
+
+        let loc = readfrom.checked;
+
+        let inp = document.getElementById("mem6").innerHTML;
+
+        if (loc == 0) {
+
+            convout.value = inp;
+
+        } else if (loc == 1) {
+
+        calcout.value = inp;
+
+        }
+
+    }
+
+    function write7() {
+
+        var convout = document.getElementById("funny2");
+
+        var calcout = document.getElementById("result");
+
+        let loc = readfrom.checked;
+
+        let inp = document.getElementById("mem7").innerHTML;
+
+        if (loc == 0) {
+
+            convout.value = inp;
+
+        } else if (loc == 1) {
+
+            calcout.value = inp;
+
+        }
+
+    }
+
+    function write8() {
+
+        var convout = document.getElementById("funny2");
+
+        var calcout = document.getElementById("result");
+
+        let loc = readfrom.checked;
+
+        let inp = document.getElementById("mem8").innerHTML;
+
+        if (loc == 0) {
+
+            convout.value = inp;
+
+        } else if (loc == 1) {
+
+            calcout.value = inp;
+
+        }
+
+    }
+
+//#endregion
+
+function dis(val) {
+
+    document.getElementById("result").value += val
+
+}
+
+ 
+
+function myFunction(event) {
+
+    if (event.key == '0' || event.key == '1'
+
+        || event.key == '2' || event.key == '3'
+
+        || event.key == '4' || event.key == '5'
+
+        || event.key == '6' || event.key == '7'
+
+        || event.key == '8' || event.key == '9'
+
+        || event.key == '+' || event.key == '-'
+
+        || event.key == '*' || event.key == '/')
+
+        document.getElementById("result").value += event.key;
+
+}
+
+ 
+
+var cal = document.getElementById("calcu");
+
+cal.onkeyup = function (event) {
+
+    if (event.keyCode === 13) {
+
+        console.log("Enter");
+
+        let x = document.getElementById("result").value
+
+        console.log(x);
+
+        solve();
+
+    }
+
+}
+
+ 
+
+function solve() {
+
+    let x = document.getElementById("result").value
+
+    let y = math.evaluate(x)
+
+    document.getElementById("result").value = y
+
+}
+
+ 
+
+function clr() {
+
+    document.getElementById("result").value = ""
+
+}
+
+function test1() {
+
+    var filenames  = document.getElementById("filenames").value
+
+    download(filenames)
+
+}
+function hideconv() {
+  var x = document.getElementById("thebiggestfunny");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function hidecalc() {
+  var x = document.getElementById("gameisbad");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function hidemem() {
+  var x = document.getElementById("Mem");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function hidetext() {
+  var x = document.getElementById("textbox");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+	</script>
+    </head>
+    <body>
+	<div class="sticky">Multitool V.1
+		<button onclick="hideconv()">Min Converter</button>
+		<button onclick="hidecalc()">Min Calculator</button>
+		<button onclick="hidemem()">Min Memory</button>
+		<button onclick="hidetext()">Min Text Editor</button>
+	</div>
+
+        </br>
+
+        <form class="draggable" id="thebiggestfunny">
+
+            <fieldset id="field">
+
+                <legend class="noselc" id="thefunny120"><b>Converter</b></legend>
+
+               
+
+            <textarea id="funny2" oninput="thefunny()"></textarea>
+
+            <textarea id="funny50" hidden></textarea>
+
+                    <div id="funnyanswer">
+
+                        <h3><span id="funny"></span></h3>
+
+                    </div>
+
+                <label id="mode" for="ChangeMode">Decimal to binary:</label>
+
+                <button type="button" id="ChangeMode" onclick="changeMode()">Change Conversion</button>
+
+            </fieldset>
+
+        </form>
+
+    <div id="gameisbad" class="draggable">
+
+        <div id="smt">
+
+            <form id="calculator">
+
+                <fieldset id="calcfield">
+
+                    <legend class="noselc" id="calctitle"><b>Calculator</b></legend>
+
+                    <table id="calcu">
+
+                        <tr>
+
+                            <td colspan="3"><input type="text" id="result"></td>
+
+                            <td><input type="button" value="c" onclick="clr()" /> </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><input type="button" value="1" onclick="dis('1')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                            <td><input type="button" value="2" onclick="dis('2')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                            <td><input type="button" value="3" onclick="dis('3')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                            <td><input type="button" value="/" onclick="dis('/')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><input type="button" value="4" onclick="dis('4')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                            <td><input type="button" value="5" onclick="dis('5')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                            <td><input type="button" value="6" onclick="dis('6')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                            <td><input type="button" value="*" onclick="dis('*')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><input type="button" value="7" onclick="dis('7')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                            <td><input type="button" value="8" onclick="dis('8')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                            <td><input type="button" value="9" onclick="dis('9')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                            <td><input type="button" value="-" onclick="dis('-')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><input type="button" value="0" onclick="dis('0')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                            <td><input type="button" value="." onclick="dis('.')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                            <td><input type="button" value="=" onclick="solve()"> </td>
+
+                            <td><input type="button" value="+" onclick="dis('+')"
+
+                                    onkeydown="myFunction(event)"> </td>
+
+                        </tr>
+
+                    </table>
+
+                </fieldset>
+
+            </form>
+
+        </div>
+
+    </div>
+
+        <div id="Mem" class="draggable">
+
+            <form id="memform">
+
+                <fieldset id="memfield">
+
+                    <legend class="noselc" id="memtitle"><b>Memory</b></legend>
+
+                    <label class="switch">
+
+                    <input type="checkbox" id="readfrom">
+
+                    <span class="slider"></span>
+
+                    </label>
+
+                    <br>
+
+                    <br>
+
+                    <button type="button" class="pad1" id="read1" onclick="memory1()">Store</button><button type="button" class="pad1" onclick="write1()">Write</button><label class="selectable memfont" id="mem1"></label><br>
+
+                    <button type="button" class="pad1" id="read2" onclick="memory2()">Store</button><button type="button" class="pad1" onclick="write2()">Write</button><label class="selectable memfont" id="mem2"></label><br>
+
+                    <button type="button" class="pad1" id="read3" onclick="memory3()">Store</button><button type="button" class="pad1" onclick="write3()">Write</button><label class="selectable memfont" id="mem3"></label><br>
+
+                    <button type="button" class="pad1" id="read4" onclick="memory4()">Store</button><button type="button" class="pad1" onclick="write4()">Write</button><label class="selectable memfont" id="mem4"></label><br>
+
+                    <button type="button" class="pad1" id="read5" onclick="memory5()">Store</button><button type="button" class="pad1" onclick="write5()">Write</button><label class="selectable memfont" id="mem5"></label><br>
+
+                    <button type="button" class="pad1" id="read6" onclick="memory6()">Store</button><button type="button" class="pad1" onclick="write6()">Write</button><label class="selectable memfont" id="mem6"></label><br>
+
+                    <button type="button" class="pad1" id="read7" onclick="memory7()">Store</button><button type="button" class="pad1" onclick="write7()">Write</button><label class="selectable memfont" id="mem7"></label><br>
+
+                    <button type="button" class="pad1" id="read8" onclick="memory8()">Store</button><button type="button" class="pad1" onclick="write8()">Write</button><label class="selectable memfont" id="mem8"></label><br>
+
+                </fieldset>
+
+            </form>
+
+        </div>
+
+        <div id="textbox" class="draggable">
+
+            <form id="textform">
+                <fieldset id="textfield">
+
+                    <legend class="noselc" id="texttitle"><b>Text</b></legend>
+
+                    <textarea id="textinput"></textarea>
+
+                    <br class="small">
+
+                    <button type="button" id="download1" onclick="test1()">Download Text</button><br>
+
+                    <label for="filenames" id="namelabel">Insert Filename and Type</label>
+
+                    <textarea id="filenames"></textarea>
+
+                </fieldset>
+
+            </form>
+
+        </div>
+    </body>
+</html>

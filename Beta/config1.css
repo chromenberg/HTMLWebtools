@@ -1,0 +1,199 @@
+body {
+    background-color: #444444;
+}
+#title {
+    text-align: center;
+}
+span.title {
+    font-family: calibri;
+    background-color: #777777;
+    padding: 10px;
+    border-radius: 20px;
+}
+p span {
+    background-color: #dddddd;
+    padding: 5px;
+    border-radius: 20px;
+    margin-right: 70%;
+    text-align: center;
+}
+#thebiggestfunny {
+    margin: 10px 50px;
+}
+#field {
+    background-color: #aaaaaa;
+}
+#thefunny120 {
+    background-color: #555555;
+    padding: 5px;
+    font-family: monospace;
+}
+#form1 {
+    text-align: center;
+    background-color: #666666;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-family: monospace;
+}
+#funnyanswer {
+    font-family: monospace;
+}
+#answerspan {
+    background-color: #777777;
+    padding: 5px;
+    border-radius: 10px;
+}
+#changeMode:active {
+    background-color: #ffffff;
+}
+#funny2 {
+    font-family: monospace;
+    word-wrap: break-word;
+    resize:vertical;
+    width: 99%;
+}
+#list1 {
+    font-family: monospace;
+    color: #b7b7b7;
+    font-size: xx-large;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#store {
+    font-family: monospace;
+    font-weight: 900;
+}
+#mode {
+    font-family: monospace;
+    font-weight: 900;
+}
+#calculator {
+    text-align: left;
+    margin-left: 25%;
+    margin-right: 30%;
+    font-family: monospace;
+}
+#calcfield {
+    background-color: #aaaaaa;
+}
+#calctitle {
+    background-color: #555555;
+    padding: 5px;
+    font-family: monospace;
+}
+#calculator {
+    width: 2px;
+    height: 250px;
+    overflow: none;
+}
+#smt {
+    width: 200px;
+    height: 250px;
+    overflow-x: none;
+}
+.outputbox {
+    contenteditable: false;
+    resize: none;
+}
+.inputbox {
+    contenteditable: true;
+    resize: none;
+}
+.small {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+#ChangeMode {
+    width: 200px;
+    height: 21px;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #aaaaaa;
+}
+input[type="button"] {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #d1d1d1;
+    color: grey;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    font-family: monospace;
+} 
+input[type="text"] {
+    padding: 20px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: monospace;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+#Mem {
+    margin-top: 50px;
+    margin-left: 7.5%;
+    width: 520px;
+}
+#memform {
+    font-family: monospace;
+}
+#memfield {
+    background-color: #aaaaaa;
+}
+#memtitle {
+    background-color: #555555;
+    padding: 5px;
+    font-family: monospace;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 26px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.memfont {
+    font-family: monospace;
+    font-weight: 900;
+}
