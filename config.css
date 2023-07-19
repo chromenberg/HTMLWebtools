@@ -1,15 +1,15 @@
 /*#region*/
     #resize {
-	resize: both;
-	padding: 10px;
+		resize: both;
+		padding: 10px;
     }
     #testbranch {
-	color: #555555;
+		color: #555555;
         font-size: 500%;
     }
     body {
         background-color: #444444;
-	height: 1080px;
+		height: 1080px;
     }
     #title {
         text-align: center;
@@ -117,16 +117,11 @@
         resize: none;
     }
     #subject {
-	margin-left: 14px;
-    }
-    #labeldiv {
-    }
-    #mspaintfree {
-	
+		margin-left: 14px;
     }
     #mspaintpremium {
-	width: 450px;
-	height: 450px;
+		width: 450px;
+		height: 450px;
     }
     #canvas_div {
         text-align: center;
@@ -135,8 +130,8 @@
         margin-right: auto;
     }
     #menu {
-	position: relative;
-	float: right;
+		position: relative;
+		float: right;
     }
 	#radius {
 		margin-left: 51px;
@@ -183,46 +178,53 @@
 	  #volume3 {
 		margin-left: 46px;
 	  }
+
+	  #sidebar textarea {
+		max-width: 98%;
+		width: 98%;
+		max-height: 25%;
+		word-wrap:unset;
+	  }
 	/*Classes*/
 	    .static {
-		position: static;
+			position: static;
 	    }
 	    .sidebar {
     		height: 720px;
     		width: 0;
     		position: fixed;
-    		z-index: 1;
+    		z-index: 10;
     		top: 0;
     		left: 0;
     		background-color: #aaaaaa;
     		overflow-x: hidden;
-		overflow-y: hidden;
+			overflow-y: hidden;
     		padding-top: 60px;
     		transition: 0.5s;
-		border-style: none none none none;
-		border-color: #444444;
+			border-style: none none none none;
+			border-color: #444444;
 	    }
 	    .sidebar1 {
-    		height: 720px;
-    		width: 10px;
+    		height: 100%;
+    		width: 0px;
     		position: fixed;
-    		z-index: 1;
+    		z-index: 100;
     		top: 0;
-    		left: 0;
+    		right: 0;
     		background-color: #aaaaaa;
     		overflow-x: hidden;
-		overflow-y: hidden;
+			overflow-y: hidden;
     		padding-top: 60px;
     		transition: 0.5s;
-		border-style: solid solid solid solid;
-		border-color: #ffffff;
+			border-style: none none none none;
+			border-color: #ffffff;
 	    }
 	    .sidebar .closebtn {
-	  	position: absolute;
-	  	top: 0;
-	  	right: 25px;
-	  	font-size: 36px;
-	  	margin-left: 50px;
+	  		position: absolute;
+	  		top: 0;
+	  		right: 25px;
+	  		font-size: 36px;
+	  		margin-left: 50px;
 	    }
 	    .sidebar buttone {
     		padding: 8px 8px 8px 32px;
@@ -233,21 +235,21 @@
     		transition: 0.3s;
     	    }
 	    .openbtn {
-		border-radius: 10px;
-		padding: 1px 10px;
-		border: none;
-		cursor: pointer;
-		background-color: #aaaaaa;
-		font-size: 20px;
+			border-radius: 10px;
+			padding: 1px 10px;
+			border: none;
+			cursor: pointer;
+			background-color: #aaaaaa;
+			font-size: 20px;
 	    }
 	    .sticky {
-		position: -webkit-sticky;
+			position: -webkit-sticky;
 	       	position: sticky;
 	       	top: 0;
 	       	background-color: #666;
 	       	padding: 4px;
 	       	font-size: 25px;
-		    z-index: 112123;
+		    z-index: 2;
 		    margin-top: -10px;
 	    }
 	    .inline {
@@ -270,7 +272,7 @@
 	        font-family: monospace;
 	    }
 	    .font1 {
-		font-family: monospace;
+			font-family: monospace;
 	    }
 	    .small {
 	        margin-top: 1px;
@@ -322,11 +324,10 @@
 	        transition: .1s;
 	    }
 	    .divlabel {
-		margin-bottom: 0px;
+			margin-bottom: 0px;
 	    }
 	    .alignlabelmiddle {
-		display: inline-block;
+			display: inline-block;
 	    }
 	/*Classes End*/
-
 /*#endregion*/
