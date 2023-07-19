@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+    <head>
+<style>
+body {
+    background-color: #444444;
+}
+#title {
+    text-align: center;
+}
+span.title {
+    font-family: calibri;
+    background-color: #777777;
+    padding: 10px;
+    border-radius: 20px;
+}
+p span {
+    background-color: #dddddd;
+    padding: 5px;
+    border-radius: 20px;
+    margin-right: 70%;
+    text-align: center;
+}
+#thebiggestfunny {
+    margin: 10px 50px;
+}
+#field {
+    background-color: #aaaaaa;
+}
+#thefunny120 {
+    background-color: #555555;
+    padding: 5px;
+    font-family: monospace;
+}
+#form1 {
+    text-align: center;
+    background-color: #666666;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-family: monospace;
+}
+#funnyanswer {
+    font-family: monospace;
+}
+#answerspan {
+    background-color: #777777;
+    padding: 5px;
+    border-radius: 10px;
+}
+#changeMode:active {
+    background-color: #ffffff;
+}
+#funny2 {
+    font-family: monospace;
+    word-wrap: break-word;
+    resize:vertical;
+    width: 99%;
+}
+#list1 {
+    font-family: monospace;
+    color: #b7b7b7;
+    font-size: xx-large;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#store {
+    font-family: monospace;
+    font-weight: 900;
+}
+#mode {
+    font-family: monospace;
+    font-weight: 900;
+}
+</style>
+<script>
+function thefunny() {
+
+//--------------------------------------------------------------//
+
+    var funny5 = document.getElementById("funny");
+    var funny7 = document.getElementById("funny50");
+    var Mode = document.getElementById("mode");
+
+//---------------------------------------------------------//
+
+    let Mode1 = "Decimal to binary:";
+    let Mode2 = "Binary to decimal:";
+    let Mode3 = "Hexadecimal to decimal:";
+    let Mode4 = "Decimal to Hexadecimal:";
+    let Mode5 = "Octal to decimal:";
+    let Mode6 = "Decimal to octal:";
+    let Mode7 = "Base64 Encoder";
+    let Mode8 = "Base64 Decoder";
+    let decimal = funny2.value;
+    let binary = (Number(decimal).toString(2));
+    const hexjoin = "0x" + decimal;
+
+//-----------------------------------------------------------------------------------------------------------------//
+    /*
+    If the mode in the 'Mode Name' is the same as on of the modes...
+    Then...
+    Convert by IF statement that outputs TRUE.
+    */
+    if (Mode.innerHTML === Mode1) {
+        funny5.innerHTML = binary;
+        funny7.innerHTML = binary;
+    }   else if (Mode.innerHTML === Mode2) {
+        funny5.innerHTML = parseInt(decimal, 2);
+        funny7.innerHTML = parseInt(decimal, 2);
+    }   else if (Mode.innerHTML === Mode3) {
+        funny5.innerHTML = "0x" + parseInt(hexjoin, );
+        funny7.innerHTML = "0x" + parseInt(hexjoin, );
+    }   else if (Mode.innerHTML === Mode4) {
+        funny5.innerHTML = (Number(decimal).toString(16));
+        funny7.innerHTML = (Number(decimal).toString(16));
+    }   else if (Mode.innerHTML === Mode5) {
+        funny5.innerHTML = parseInt(decimal, 8);
+        funny7.innerHTML = parseInt(decimal, 8);
+    }   else if (Mode.innerHTML === Mode6) {
+        funny5.innerHTML = (Number(decimal).toString(8));
+        funny7.innerHTML = (Number(decimal).toString(8));
+    }   else if (Mode.innerHTML === Mode7) {
+        funny5.innerHTML = btoa(decimal);
+        funny7.innerHTML = btoa(decimal);
+    }   else {
+        funny5.innerHTML = atob(decimal);
+        funny7.innerHTML = atob(decimal);
+    }
+}
+
+// Function responsible for changing / selecting modes
+
+function changeMode() {
+    // Conversion Types
+    let Mode1 = "Decimal to binary:";
+    let Mode2 = "Binary to decimal:";
+    let Mode3 = "Hexadecimal to decimal:";
+    let Mode4 = "Decimal to Hexadecimal:";
+    let Mode5 = "Octal to decimal:";
+    let Mode6 = "Decimal to octal:";
+    let Mode7 = "Base64 Encoder";
+    let Mode8 = "Base64 Decoder";
+//---------------------------------------------------------------------------------------------------------------//
+    var Mode = document.getElementById("mode");
+    // Mode Selector:
+    if (Mode.innerHTML === Mode1) {
+        Mode.innerHTML = Mode2;
+    } else if (Mode.innerHTML === Mode2) {
+        Mode.innerHTML = Mode3;
+    } else if (Mode.innerHTML === Mode3) {
+        Mode.innerHTML = Mode4;
+    } else if (Mode.innerHTML === Mode4) {
+        Mode.innerHTML = Mode5;
+    } else if (Mode.innerHTML === Mode5) {
+        Mode.innerHTML = Mode6;
+    } else if (Mode.innerHTML === Mode6) {
+        Mode.innerHTML = Mode7;
+    } else if (Mode.innerHTML === Mode7) {
+        Mode.innerHTML = Mode8;
+    } else {
+        Mode.innerHTML = Mode1;
+    }
+}
+</script>
+    </head>
+    <body>
+        </br>
+        <form id="thebiggestfunny">
+            <fieldset id="field">
+                <legend id="thefunny120"><b>Converter</b></legend>
+               
+            <textarea id="funny2" oninput="thefunny()"></textarea>
+            <textarea id="funny50" hidden></textarea>
+                    <div id="funnyanswer">
+                        <h3><span id="funny"></span></h3>
+                    </div>
+                <label id="mode" for="ChangeMode">Decimal to binary:</label>
+                <button type="button" id="ChangeMode" onclick="changeMode()">Change Conversion</button>
+            </fieldset>
+        </form>
+        <div id="history">
+            <span id="history1"></span>
+            <span id="history2"></span>
+            <span id="history3"></span>
+            <span id="history4"></span>
+            <span id="history5"></span>
+            <span id="history6"></span>
+            <span id="history7"></span>
+            <span id="history8"></span>
+            <span id="history9"></span>
+        </div>
+    </body>
+</html>
