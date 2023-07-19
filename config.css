@@ -138,33 +138,51 @@
 	position: relative;
 	float: right;
     }
-#radius {
-  margin-left: 51px;
-}
-#diameter {
-  margin-left: 36px;
-}
-#area {
-  margin-left: 64px;
-}
-#radius2 {
-  margin-left: 51px;
-}
-#diameter2 {
-  margin-left: 36px;
-}
-#area2 {
-  margin-left: 64px;
-}
-#height {
-  margin-left: 52px;
-}
-#surfarea {
-  margin-left: 12px;
-}
-#volume {
-  margin-left: 46px;
-}
+	#radius {
+		margin-left: 51px;
+	  }
+	  #diameter {
+		margin-left: 36px;
+	  }
+	  #area {
+		margin-left: 64px;
+	  }
+	  #radius2 {
+		margin-left: 51px;
+	  }
+	  #diameter2 {
+		margin-left: 36px;
+	  }
+	  #area2 {
+		margin-left: 64px;
+	  }
+	  #height {
+		margin-left: 52px;
+	  }
+	  #surfarea {
+		margin-left: 12px;
+	  }
+	  #volume {
+		margin-left: 46px;
+	  }
+	  #radius3 {
+		margin-left: 51px;
+	  }
+	  #diameter3 {
+		margin-left: 36px;
+	  }
+	  #area3 {
+		margin-left: 64px;
+	  }
+	  #height3 {
+		margin-left: 52px;
+	  }
+	  #surfarea3 {
+		margin-left: 12px;
+	  }
+	  #volume3 {
+		margin-left: 46px;
+	  }
 	/*Classes*/
 	    .static {
 		position: static;
@@ -229,11 +247,11 @@
 	       	background-color: #666;
 	       	padding: 4px;
 	       	font-size: 25px;
-		z-index:112123
-		margin-top: -10px;
+		    z-index: 112123;
+		    margin-top: -10px;
 	    }
 	    .inline {
-		display: inline-block;
+			display: inline-block;
 	    }
 	    .windowdiv {
 	        background-color: #555555;
