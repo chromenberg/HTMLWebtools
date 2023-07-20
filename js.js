@@ -248,7 +248,7 @@ function drawLine(context, x1, y1, x2, y2) {
   if (document.getElementById("erase").checked == false) {
     context.strokeStyle = document.getElementById('selColor').value;
   } else {
-    context.strokeStyle = "#aaaaaa";
+    context.strokeStyle = "#ffffff";
   }
   context.lineWidth = document.getElementById('selWidth').value;
   context.lineJoin = "round";
@@ -263,7 +263,7 @@ function clearArea() {
     context.clearRect(0, 0, context.canvas.width, context.canvas.height);
 }
 function init() {
-  context.fillStyle = "#aaaaaa", context.fillRect(0, 0, context.canvas.width, context.canvas.height)
+  context.fillStyle = "#ffffff", context.fillRect(0, 0, context.canvas.width, context.canvas.height)
 }
 
 
