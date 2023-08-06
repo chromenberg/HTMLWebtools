@@ -26,5 +26,3 @@
 > Minimiseable Windows
 > 
 > something idfk
-
-Version 2 Is in prerelease. Code remnants in 1.4
